@@ -1,0 +1,88 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "background": "#444444",
+          "foreground": "#0077c2",
+          "leading_diamond": "\ue0b6",
+          "style": "diamond",
+          "template": " {{ .OS }}\\",
+          "type": "shell"
+        },
+        {
+          "background": "#444444",
+          "foreground": "#0077c2",
+          "powerline_symbol": "\ue0b0",
+          "properties": {
+            "style": "full"
+          },
+          "style": "powerline",
+          "template": " {{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "background": "#268bd2",
+          "foreground": "#000000",
+          "style": "powerline",
+          "powerline_symbol": "\ue0b0",
+          "template": " {{ .HEAD }} ",
+          "type": "git"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "right",
+      "segments": [
+        {
+          "background": "#444444",
+          "foreground": "#808080",
+          "properties": {
+            "always_enabled": true,
+            "style": "round",
+            "threshold": 500
+          },
+          "style": "diamond",
+          "leading_diamond": "\ue0b2",
+          "template": " {{ .FormattedMs }} ",
+          "type": "executiontime"
+        }, 
+        {
+          "background": "#444444",
+          "foreground": "#808080",
+          "properties": {
+            "time_format": "15:04:05"
+          },
+          "trailing_diamond": "\ue0b4",
+          "style": "diamond",
+          "template": "\ue0bb {{ .CurrentDate | date .Format }} ",
+          "type": "time"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#D4E157",
+          "foreground_templates": [
+            "{{ if gt .Code 0 }}#FF5252{{ end }}"
+          ],
+          "properties": {
+            "always_enabled": true
+          },
+          "style": "plain",
+          "template": "\u276f ",
+          "type": "exit"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "version": 2
+}
