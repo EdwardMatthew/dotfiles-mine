@@ -17,7 +17,7 @@
           "foreground": "#0077c2",
           "powerline_symbol": "\ue0b0",
           "properties": {
-            "style": "full"
+            "style": "agnoster_short"
           },
           "style": "powerline",
           "template": " {{ .Path }} ",
