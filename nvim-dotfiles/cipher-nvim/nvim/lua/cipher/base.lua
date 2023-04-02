@@ -1,6 +1,5 @@
 vim.cmd("autocmd!")
-vim.cmd [[colorscheme spaceduck]]
-
+vim.cmd("colorscheme everblush")
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
