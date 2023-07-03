@@ -7,10 +7,10 @@ vim.cmd [[packadd packer.nvim]]
 
 packer.startup(function(use)
   use 'wbthomason/packer.nvim'
+  use 'mfussenegger/nvim-dap'
   use 'neovim/nvim-lspconfig'
-  use {
-      'Everblush/nvim', name = 'everblush'
-  }
+  use 'rebelot/kanagawa.nvim'
+  use 'folke/tokyonight.nvim'
   use 'nvim-lualine/lualine.nvim'
   use 'kyazdani42/nvim-web-devicons'
   use 'nvim-telescope/telescope.nvim'
@@ -43,5 +43,9 @@ packer.startup(function(use)
   use {
       'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'
   }
+  use {
+    'akinsho/toggleterm.nvim', tag = "*"
+  }
   use 'tjdevries/colorbuddy.nvim'
+  use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install", setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 end)
