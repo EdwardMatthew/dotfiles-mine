@@ -1,14 +1,17 @@
 return {
-  "craftzdog/solarized-osaka.nvim",
-  lazy = true,
-  priority = 1000,
-  opts = function()
-    return {
-      transparent = true,
-      styles = {
-        comments = { italic = false },
-        keywords = { italic = false },
-      },
-    }
-  end,
+  "catppuccin/nvim",
+  lazy = false,
+  name = "catppuccin",
+  opts = {
+    transparent_background = true,
+    bufferline = true,
+    cmp = true,
+    no_italic = true,
+    treesitter = true,
+    telescope = true,
+    native_lsp = {
+      enabled = true,
+    },
+    noice = true,
+  },
 }

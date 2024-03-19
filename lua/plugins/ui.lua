@@ -74,6 +74,9 @@ return {
   -- buffer line
   {
     "akinsho/bufferline.nvim",
+    version = "*",
+    dependencies = "nvim-tree/nvim-web-devicons",
+    after = "catppuccin",
     event = "VeryLazy",
     keys = {
       { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
@@ -96,7 +99,7 @@ return {
     opts = {
       options = {
         -- globalstatus = false,
-        theme = "solarized_dark",
+        theme = "catppuccin",
       },
     },
   },

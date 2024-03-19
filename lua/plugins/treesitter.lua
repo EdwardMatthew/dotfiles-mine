@@ -9,17 +9,15 @@ return {
         "cmake",
         "cpp",
         "css",
-        "fish",
         "gitignore",
         "go",
-        "graphql",
         "http",
         "java",
         "php",
-        "rust",
         "scss",
         "sql",
         "svelte",
+        "python",
       },
 
       -- matchup = {
