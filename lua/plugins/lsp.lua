@@ -12,6 +12,7 @@ return {
         "tailwindcss-language-server",
         "typescript-language-server",
         "css-lsp",
+        "texlab",
       })
     end,
   },
@@ -19,6 +20,15 @@ return {
   -- lsp servers
   {
     "neovim/nvim-lspconfig",
+    init = function()
+      local keys = require("lazyvim.plugins.lsp.keymaps").get()
+      keys[#keys + 1] = {
+        "gd",
+        function()
+          require("telescope.builtin").lsp_definition({ reuse_win = false })
+        end,
+      }
+    end,
     opts = {
       inlay_hints = { enabled = true },
       ---@type lspconfig.options

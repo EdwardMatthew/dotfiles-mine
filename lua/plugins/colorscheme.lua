@@ -1,17 +1,14 @@
 return {
-  "catppuccin/nvim",
-  lazy = false,
-  name = "catppuccin",
+  "rebelot/kanagawa.nvim",
+  lazy = true,
+  priority = 1000,
   opts = {
-    transparent_background = true,
-    bufferline = true,
-    cmp = true,
-    no_italic = true,
-    treesitter = true,
-    telescope = true,
-    native_lsp = {
-      enabled = true,
-    },
-    noice = true,
+    commentStyle = { italic = false },
+    keywordStyle = { italic = false },
+    overrides = function(term)
+      return {
+        ["@variable.builtin"] = { italic = false },
+      }
+    end,
   },
 }

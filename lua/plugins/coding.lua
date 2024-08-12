@@ -94,4 +94,29 @@ return {
       table.insert(opts.sources, { name = "emoji" })
     end,
   },
+  {
+    "akinsho/toggleterm.nvim",
+    version = "*",
+    opts = {
+      open_mapping = [[<c-\>]],
+      shade_terminals = false,
+      direction = "horizontal",
+      winblend = 3,
+      winbar = {
+        enabled = false,
+        name_formatter = function(term)
+          return term.name
+        end,
+      },
+    },
+  },
+  {
+    "iamcco/markdown-preview.nvim",
+    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+    build = "cd app && yarn install",
+    init = function()
+      vim.g.mkdp_filetypes = { "markdown" }
+    end,
+    ft = { "markdown" },
+  },
 }
