@@ -99,7 +99,7 @@ return {
     opts = {
       options = {
         -- globalstatus = false,
-        theme = "kanagawa",
+        theme = "solarized-osaka",
       },
     },
   },
