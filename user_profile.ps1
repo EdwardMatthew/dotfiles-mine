@@ -2,8 +2,11 @@
 [console]::InputEncoding = [console]::OutputEncoding = New-Object System.Text.UTF8Encoding
 
 Import-Module posh-git
-$omp_config = Join-Path $PSScriptRoot ".\mocha.omp.json"
-oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+
+## Uncomment the two lines below to use the themes in this folder instead
+#$omp_config = Join-Path $PSScriptRoot ".\cipher.omp.json"
+#oh-my-posh --init --shell pwsh --config $omp_config | Invoke-Expression
+oh-my-posh --init --shell pwsh --config 'C:\Users\User\scoop\apps\oh-my-posh\current\themes\huvix.omp.json' | Invoke-Expression
 
 Import-Module -Name Terminal-Icons
 
