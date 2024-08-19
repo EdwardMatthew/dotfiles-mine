@@ -1,14 +1,14 @@
 return {
-  "rebelot/kanagawa.nvim",
+  "craftzdog/solarized-osaka.nvim",
   lazy = true,
   priority = 1000,
-  opts = {
-    commentStyle = { italic = false },
-    keywordStyle = { italic = false },
-    overrides = function(term)
-      return {
-        ["@variable.builtin"] = { italic = false },
-      }
-    end,
-  },
+  opts = function()
+    return {
+      transparent = true,
+      styles = {
+        comments = { italic = false },
+        keywords = { italic = false },
+      },
+    }
+  end,
 }
